@@ -1,0 +1,12 @@
+<div class="container">
+
+<%= simple_form_for(task_in_partial) do |f| %>
+
+  <%= f.input :title %>
+
+  <%= f.input :details %>
+
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
+</div>

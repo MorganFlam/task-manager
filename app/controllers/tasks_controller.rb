@@ -11,13 +11,13 @@ class TasksController < ApplicationController
     redirect_to task_path(@task.id)
   end
 
-  # def edit
-  # end
+  def edit
+  end
 
-  # def update
-  #   @task.update(task_params)
-  #   redirect_to task_path(@task)
-  # end
+  def update
+    @task.update(task_params)
+    redirect_to task_path(@task)
+  end
 
   def index
     @tasks = Task.all

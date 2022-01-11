@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'tasks/:id/edit', to: 'tasks#edit', as: :edit_task
   get 'tasks', to: 'tasks#index'
   get 'tasks/:id', to: 'tasks#show', as: :task
-  # post 'tasks', to: 'tasks#create'
+  post 'tasks', to: 'tasks#create'
   # patch 'tasks/:id', to: 'tasks#update'
-  # delete 'tasks/:id', to: 'tasks#destroy'
+  delete 'tasks/:id', to: 'tasks#destroy'
 end

@@ -4,3 +4,22 @@
 .container {
   width: 30%;
 }
+
+body {
+  background-color: rgb(125, 214, 255);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}

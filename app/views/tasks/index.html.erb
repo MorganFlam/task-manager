@@ -1,13 +1,18 @@
-<h1>My Tasks</h1>
+<h1>TO DO</h1>
 
-<div class="container">
+<div class="cards-container">
   <% @tasks.each do |task| %>
-  <div class="card">
-    <%= link_to task.title, task_path(task) %>
-    <%= link_to  "Edit task", edit_task_path(task) %>
-    <%= link_to '💀', task_path(task), method: 'delete', data: { confirm: 'Are you sure?' } %>
-  </div>
+    <div class="card">
+      <%= link_to task.title, task_path(task), class:"card-title" %>
+      <p><%= task.details %></p>
+      <div class="task-controls">
+        <%= link_to "Edit", edit_task_path(task) %>
+        <%= link_to "Delete", task_path(task), class:"text-danger", method: 'delete', data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
   <% end %>
 </div>
 
-<%= link_to  "Create new task", new_task_path, class: "btn btn-primary"  %>
+<div class="btn-container">
+  <%= link_to  "Create new task", new_task_path, class: "btn btn-primary"  %>
+</div>
